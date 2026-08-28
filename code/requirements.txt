@@ -1,0 +1,9 @@
+# Core dependencies
+anthropic>=0.18.0
+requests>=2.31.0
+
+# Evaluation
+tqdm>=4.66.0
+
+# Optional: AgentDojo integration
+# agentdojo>=0.1.0
