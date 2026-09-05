@@ -37,13 +37,13 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 ### 5. Download External Datasets
 
 #### TRAJECT-Bench
-```bash
-# Download from official repository
-git clone https://github.com/[TRAJECT-Bench-repo] data/TRAJECT-Bench-master
+Not redistributed here. Download from the official repository and convert the
+tool-call trajectories to network requests. Experiments that need it accept a
+path to your converted copy via `--benign` or `--traject-scenarios`.
 
-# Convert to network request format
-python data/convert_traject_bench.py
-```
+The blinded and OOD evaluations do **not** require it — they run against the
+30 taxonomy scenarios shipped in `data/taxonomy_scenarios.json` and against
+scenarios generated at runtime.
 
 #### AgentDojo (Optional)
 ```bash
@@ -54,11 +54,11 @@ pip install agentdojo
 ## Verify Installation
 
 ```bash
-# Run quick test
-python -c "from code.trajectory_aware import TrajectoryAwareDefense; print('OK')"
+# Rules import cleanly
+python -c "from code.trajectory_aware import INTERNAL_DOMAINS, ALWAYS_BLOCK; print('OK')"
 
-# Run taxonomy evaluation (should complete in ~2 minutes)
-python evaluation/eval_taxonomy.py
+# Destination-blinded evaluation (~2 minutes, needs Vertex AI)
+python evaluation/run_blinded_eval.py --experiment blinded
 ```
 
 ## Troubleshooting

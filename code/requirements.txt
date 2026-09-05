@@ -5,5 +5,8 @@ requests>=2.31.0
 # Evaluation
 tqdm>=4.66.0
 
+# Google Vertex AI -- required for Tier-2 (reference configuration)
+google-genai>=0.1.0
+
 # Optional: AgentDojo integration
 # agentdojo>=0.1.0
