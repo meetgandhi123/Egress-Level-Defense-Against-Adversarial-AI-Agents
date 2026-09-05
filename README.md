@@ -114,7 +114,7 @@ MIT License (code) / CC-BY 4.0 (data and documentation)
 @inproceedings{agentleash2027,
   title     = {Egress-Level Defense Against Adversarial AI Agents},
   author    = {[Authors]},
-  booktitle = {IEEE Conference on Secure and Trustworthy Machine Learning (SaTML)},
+  booktitle = {IEEE Conference on Secure and Trustworthy Machine Learning (SaTML)}, 
   year      = {2027}
 }
 ```
